@@ -1,9 +1,8 @@
-#!/usr/bin/python3
-def remove_char_at(str, n):
+har_at(str, n):
     string = ""
     j = 0
-    for l in str:
+    for n in str:
         if (j != n):
-            string = string + l
+            string = string + n
         j = j + 1
     return(string)
