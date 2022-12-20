@@ -3,4 +3,3 @@ class Square():
     """
        This is just an empty class
     """
-    pass
