@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+    """Definition of a classs"""
 class Square:
-    """This is just an empty class"""
+    """Square is an empty class"""
     pass
