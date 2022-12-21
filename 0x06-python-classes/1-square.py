@@ -7,12 +7,9 @@ class Square():
     """represent asquare"""
 
     def __init__(self, size):
-    """Initializes the attributes of the instance
+        """ __init__ method
 
-       Args:
-       self: reference to the instance of the class
-       size (int): integer that represents the square's sizei
-
-    """
-
+        Args:
+            size (int): integer that represents the square's size
+        """
         self.__size = size
