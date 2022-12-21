@@ -3,14 +3,14 @@
 """Defines a square"""
 
 
-class Square():i
+class Square():
     """represent asquare"""
 
     def __init__(self, size):
     """Initializes the attributes of the instance
 
        Args:
-       self : reference to the instance of the class
+       self: reference to the instance of the class
        size (int): integer that represents the square's sizei
 
     """
