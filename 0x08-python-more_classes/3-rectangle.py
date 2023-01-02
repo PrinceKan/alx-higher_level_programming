@@ -53,8 +53,10 @@ class Rectangle:
             return (2*(self.__width + self.__height))
 
     def __str__(self):
-        """stance method that returns an ''informal'' and nicely\
-           printable string representation of an instance"""
+        """__str__  method
+           
+           Return: nothing or an area
+        """
         if self.__width == 0 or self.__height == 0:
             return ('')
         x = ''
