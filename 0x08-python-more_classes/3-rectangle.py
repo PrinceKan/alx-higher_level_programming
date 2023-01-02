@@ -1,4 +1,4 @@
-i#!/usr/bin/python3
+#!/usr/bin/python3
 
 """Define a class named rectangle"""
 
@@ -54,7 +54,7 @@ class Rectangle:
 
     def __str__(self):
         """__str__  method
-           
+
            Return: nothing or an area
         """
         if self.__width == 0 or self.__height == 0:
