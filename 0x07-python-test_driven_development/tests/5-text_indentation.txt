@@ -1,0 +1,54 @@
+>>> text_indentation = __import__("5-text_indentation").text_indentation
+
+>>> text="this is my test? Yes! it is your test.You are testing for: ?, . and :"
+>>> text_indentation(text)
+this is my test?
+
+Yes! it is your test.
+
+You are testing for:
+
+?
+
+, .
+
+and :
+
+
+>>> text = 123.45
+>>> text_indentation(text)
+Traceback (most recent call last):
+...
+...
+...    
+TypeError: text must be a string
+
+>>> text = "hello"
+>>> text_indentation(text)
+hello
+
+>>> text = "I.?: Am.?     Glad."
+>>> text_indentation(text)
+I.
+
+?
+
+:
+
+Am.
+
+?
+
+Glad.
+
+
+>>> text_indentation(".Hello")
+.
+
+Hello
+>>> text_indentation("   ")
+>>> text_indentation("")
+>>> text_indentation()
+...
+...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
