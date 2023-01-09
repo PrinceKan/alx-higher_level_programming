@@ -4,7 +4,7 @@
 
 
 class BaseGeometry:
-    """ Represent the class BaseGeometry """
+    """ rea is a method """
 
     def area(self):
         """ Function tha define the area """
