@@ -1,55 +1,42 @@
 >>> MyList = __import__('1-my_list').MyList
 
-'initialize my list '
 >>> my_list = MyList()
 
-' add numbers to my_list '
 >>> my_list.append(1)
 >>> my_list.append(4)
 >>> my_list.append(2)
 >>> my_list.append(3)
 >>> my_list.append(5)
 
-' print my_list in a messe '
 
 >>> print(my_list)
 [1, 4, 2, 3, 5]
 
 
-' print my_list sorted '
 >>> my_list.print_sorted()
 [1, 2, 3, 4, 5]
 
-' Return to the origin order '
 >>> print(my_list)
 [1, 4, 2, 3, 5]
 
-' initialize a new list '
 >>> new_list = MyList()
 
-'add number to new_list 
 >>> new_list.append(165)
 >>> new_list.append(-15)
 
-' print new_list in a messe '
 >>> print(new_list)
 [165, -15]
 
-' print my_list sorted '
 >>> my_list.print_sorted()
 [-15, 165]
 
-' Return to the origin order '
 >>> print(my_list)
 [165, -15]
 
-' New initialization '
 >>> list = MyList()
 
-' print an empty list '
 >>> print(list)
 []
 
-' print my_list sorted '
 >>> my_list.print_sorted()
 []
