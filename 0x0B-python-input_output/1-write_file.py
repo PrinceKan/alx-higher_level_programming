@@ -8,7 +8,7 @@ def write_file(filename="", text=""):
        Create the file if doesn't exist and overwrite the content
        of the file if it already exists.
        Args:
-            filename="": Handle the file name 
+            filename="": Handle the file name
             text="": Handle the text into the file
 
        Return: the number of characters written
