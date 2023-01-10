@@ -1,17 +1,31 @@
 #!/usr/bin/python3
 
-""" Define a function to_json_string """
-
-import json
+""" Define the class Student """
 
 
-def to_json_string(my_obj):
-    """to_json_string method that returns the JSON representation of
-       an object (string)
-
-        Args:
-             my_obj (string): handle object wich is a string
-
-        Returns: the JSON representation of an object (string)
+class Student:
+    """Public instance attributes:
+       first_name
+       last_name
+       age
     """
-    return (json.dumps(my_obj))
+    def __init__(self, first_name, last_name, age):
+        """ instantiation """
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+
+    def to_json(self, attrs=None):
+        """to_json public method that retrieves a dictionary
+           representation of a Student
+
+           Return: adictionary representation of a Student instance
+        """
+        if attrs is None:
+            return self.__dict__
+        else:
+            d = dict()
+            for i in attrs:
+                if i in self.__dict__:
+                    d[i] = self.__dict__[i]
+            return d
