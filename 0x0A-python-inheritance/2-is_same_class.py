@@ -1,4 +1,4 @@
-i#!/usr/bin/python3
+#!/usr/bin/python3
 
 """ This module contains one function: is_same_class """
 
