@@ -4,6 +4,7 @@
 
 
 class MyList(list):
-    """ print_sorted method """
+    """ Mylist is the de defined class """
     def print_sorted(self):
+        """ print_sorted method """
         print(sorted(self))
