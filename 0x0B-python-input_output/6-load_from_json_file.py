@@ -4,15 +4,13 @@
 import json
 
 
-def save_to_json_file(my_obj, filename):
-    """save_to_json_file method that write an Object to a text file, using a
-       JSON representation
+def load_from_json_file(filename):
+    """save_to_json_file method that creates an Object from a “JSON file”
 
        Args:
-            my_obj (string): Hamdle the object wich is string
             filename (string): Hamdle the filename created wich is a string
 
-       Return: A json representation file
+       Return: A file that will load from json
     """
-    with open(filename, "w") as f:
-        return (json.dump(my_obj, f))
+    with open(filename, "r") as f:
+        return(json.load(f))
