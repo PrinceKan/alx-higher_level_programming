@@ -4,10 +4,10 @@
 
 
 class BaseGeometry:
-    """ area is a method """
+    """ Represent the BaseGeometry """
 
     def area(self):
-        """ Function tha define the area """
+        """ area method """
         raise Exception('area() is not implemented')
 
     def integer_validator(self, name, value):
