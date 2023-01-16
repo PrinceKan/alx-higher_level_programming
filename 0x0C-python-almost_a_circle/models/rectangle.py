@@ -100,6 +100,32 @@ class Rectangle(Base):
         print(rectangle, end="")
 
     def __str__(self):
-        """ Return  returns [Rectangle] (<id>) <x>/<y> - <width>/<height> """
         return "[Rectangle] ({}) {}/{} - {}/{}"\
                .format(self.id, self.x, self.y, self.width, self.height)
+
+    def update(self, *args):
+        """update is a public methode that assigns an argument
+             to each attribute:
+            Args:
+                *args is a \"no-keyword argument\" with an order to follow
+                for each argument handle
+                1st argument should be the id attribute
+                2nd argument should be the width attribute
+                3rd argument should be the height attribute
+                4th argument should be the x attribute
+                5th argument should be the y attribute
+        """
+        counter = 0
+        if args is not None:
+            for a in args:
+                counter += 1
+            if counter == 1:
+                self.id = a
+            if counter == 2:
+                self.width = a
+            if counter == 3:
+                self.height = a
+            if counter == 4:
+                self.x = a
+            if counter == 5:
+                self.y = a
