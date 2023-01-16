@@ -31,10 +31,11 @@ class Square(Rectangle):
         self.height = value
 
     def update(self, *args, **kwargs):
-        """update is a public methode that assigns an argument
-             to each attribute:
+        """update is a public method that assigns an argument
+             to each attribute
+             
             Args:
-                *args is a “no-keyword argument” with an order to follow
+                *args is a \"no-keyword argument\" with an order to follow
                 for each argument handle
                 1st argument should be the id attribute
                 2nd argument should be the height attribute
