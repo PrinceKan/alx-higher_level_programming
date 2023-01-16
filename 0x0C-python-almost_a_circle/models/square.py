@@ -7,13 +7,15 @@ from models.rectangle import Rectangle
 
 class Square(Rectangle):
     """ Defining the class that inherits from Rectangle """
+
     def __init__(self, size, x=0, y=0, id=None):
         """ instantiation """
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
+        """ [Square] (<id>) <x>/<y> - <size> """
         return "[Square] ({}) {}/{} - {}"\
-                .format(self.id, self.x, self.y, self.height)
+                .format(self.id, self.x, self.y, self.width)
 
     @property
     def size(self):
@@ -38,7 +40,7 @@ class Square(Rectangle):
                 *args is a \"no-keyword argument\" with an order to follow
                 for each argument handle
                 1st argument should be the id attribute
-                2nd argument should be the height attribute
+                2nd argument should be the size attribute
                 3rd argument should be the x attribute
                 4th argument should be the y attribute
 
