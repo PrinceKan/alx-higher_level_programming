@@ -27,6 +27,7 @@ class Rectangle(Base):
            Args:
                value(int): handle integer value
         """
+        self.all_setter_validator("width", value)
         self.__width = value
 
     @property
@@ -41,6 +42,7 @@ class Rectangle(Base):
            Args:
                value(int): handle integer value
         """
+        self.all_setter_validator("height", value)
         self.__height = value
 
     @property
@@ -55,6 +57,7 @@ class Rectangle(Base):
            Args:
                value(int): handle integer value
         """
+        self.all_setter_validator("x", value)
         self.__x = value
 
     @property
@@ -69,4 +72,16 @@ class Rectangle(Base):
            Args:
                value(int): handle integer value
         """
+        self.all_setter_validator("y", value)
         self.__y = value
+
+    @staticmethod
+    def all_setter_validator(attribute, value):
+        if type(value) is not int:
+            raise TypeError("{} must be an integer".format(attribute))
+        if attribute == "width" or attribute == "height":
+            if value <= 0:
+                raise ValueError("{} must be > 0".format(attribute))
+        else:
+            if value < 0:
+                raise ValueError("{} must be >= 0".format(attribute))
