@@ -93,7 +93,11 @@ class Rectangle(Base):
     def display(self):
         """ prints in stdout the Rectangle instance with the character # """
 
-        rectangle = ""
+        rectangle1 = ""
         for n in range(self.height):
-            rectangle += self.width * "#" + "\n"
-        print(rectangle, end="")
+            rectangle1 += self.width * "#" + "\n"
+        print(rectangle1, end="")
+
+    def __str__(self):
+        return "[Rectangle] ({}) {}/{} - {}/{}"\
+                .format(self.id, self.x, self.y, self.width, self.height)
