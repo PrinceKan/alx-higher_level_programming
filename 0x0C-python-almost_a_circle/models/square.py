@@ -6,59 +6,58 @@ from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """ Defining the class that inherits from Rectangle """
-
+    """ Defining the class that inherits from base """
     def __init__(self, size, x=0, y=0, id=None):
         """ instantiation """
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
-        """ [Square] (<id>) <x>/<y> - <size> """
+        """ Return [Rectangle] (<id>) <x>/<y> - <width>/<height> """
         return "[Square] ({}) {}/{} - {}"\
-                .format(self.id, self.x, self.y, self.width)
+                .format(self.id, self.x, self.y, self.height)
 
     @property
     def size(self):
-        """ Return size getter wich is the private instance attributes """
+        """ Return size getter wich is the public instance attributes """
         return self.width
 
     @size.setter
     def size(self, value):
-        """size method that set a private attribute
+        """size method that set a public attribute
 
-           Args:
-               value(int): handle integer value
+        Args:
+            value(int): handle integer value
         """
         self.width = value
         self.height = value
 
     def update(self, *args, **kwargs):
-        """update is a public method that assigns an argument
-             to each attribute
-             
-            Args:
-                *args is a \"no-keyword argument\" with an order to follow
-                for each argument handle
-                1st argument should be the id attribute
-                2nd argument should be the size attribute
-                3rd argument should be the x attribute
-                4th argument should be the y attribute
+        """update is a public methode that assigns an argument
+             to each attribute:
 
-                **kwargs is an \"key-worded argument\" with wich order is not
+        Args:
+            *args is a \"no-keyword argumentâ\' with an order to follow
+            for each argument handle
+            1st argument should be the id attribute
+            2nd argument should be the height attribute
+            3rd argument should be the x attribute
+            4th argument should be the y attribute
+
+            **kwargs is an \"key-worded argumentâ\" with wich order is not
                 important
         """
         counter = 0
         if args != ():
             for a in args:
                 counter += 1
-            if counter == 1:
-                self.id = a
-            if counter == 2:
-                self.size = a
-            if counter == 3:
-                self.x = a
-            if counter == 4:
-                self.y = a
+                if counter == 1:
+                    self.id = a
+                if counter == 2:
+                    self.size = a
+                if counter == 3:
+                    self.x = a
+                if counter == 4:
+                    self.y = a
         else:
             for key, value in kwargs.items():
                 if key == "id":
