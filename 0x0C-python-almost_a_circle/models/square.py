@@ -7,13 +7,11 @@ from models.rectangle import Rectangle
 
 class Square(Rectangle):
     """ Defining the class that inherits from base """
-
     def __init__(self, size, x=0, y=0, id=None):
         """ instantiation """
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
-        """ Return [Rectangle] (<id>) <x>/<y> - <width>/<height> """
         return "[Square] ({}) {}/{} - {}"\
                 .format(self.id, self.x, self.y, self.height)
 
@@ -26,24 +24,23 @@ class Square(Rectangle):
     def size(self, value):
         """size method that set a public attribute
 
-            Args:
-                value(int): handle integer value
+           Args:
+               value(int): handle integer value
         """
         self.width = value
         self.height = value
 
     def update(self, *args, **kwargs):
         """update is a public methode that assigns an argument\
-           to each attribute:
-
+             to each attribute:
             Args:
-                *args: is a \"no-keyword argumentâ\' with an order to follow
-                for each argument handle:\
-                1st argument should be the id attribute\
-                2nd argument should be the height attribute\
-                3rd argument should be the x attribute\
+                *args: is a \"no-keyword argument\" with an order to follow\
+                for each argument handle
+                1st argument should be the id attribute
+                2nd argument should be the height attribute
+                3rd argument should be the x attribute
                 4th argument should be the y attribute
-                **kwargs: is an \"key-worded argumentâ\" with wich order is not
+                **kwargs: is an \"key-worded argument\" with wich order is not
                 important
         """
         counter = 0
