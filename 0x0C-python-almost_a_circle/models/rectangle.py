@@ -146,7 +146,7 @@ class Rectangle(Base):
                     self.y = value
 
     def to_dictionary(self):
-    """ Returns the dictionary representation of a Rectangle """
+    """ Return the dictionary representation of a Rectangle """
         dico = {}
         dico["id"] = self.id
         dico["width"] = self.width
