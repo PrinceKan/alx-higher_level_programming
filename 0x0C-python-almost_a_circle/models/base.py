@@ -75,7 +75,22 @@ class Base:
         instance = cls.__name__
         if instance == "Square":
             dummy = cls(4)
-        elif instance == "Rectangle":
+        if instance == "Rectangle":
             dummy = cls(7, 3)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """ Return: a list of instances or not if it is emoty """
+        filename = cls.__name__ + ".json"
+        try:
+            with open(filename, "r") as fl:
+                index = []
+                idx = cls.from_json_string(fl.read())
+                for item in idx:
+                    create_item = cls.create(**item)
+                    index.append(create_item)
+                return index
+        except Exception as e:
+            return []
