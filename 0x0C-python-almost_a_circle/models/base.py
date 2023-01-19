@@ -52,3 +52,14 @@ class Base:
                     index.append(item)
             dico = cls.to_json_string(index)
             fl.write(dico)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """from_json_string is a string method that represents a list
+           of dictionarie
+           Return: list of the JSON string representation json_string
+        """
+        if json_string is None or len(json_string) == 0:
+            return []
+        else:
+            return json.loads(json_string)
