@@ -4,6 +4,7 @@
    classes in this project
 """
 import json
+import csv
 
 
 class Base:
@@ -84,6 +85,39 @@ class Base:
     def load_from_file(cls):
         """ Return: a list of instances or not if it is emoty """
         filename = cls.__name__ + ".json"
+        try:
+            with open(filename, "r") as fl:
+                index = []
+                idx = cls.from_json_string(fl.read())
+                for item in idx:
+                    create_item = cls.create(**item)
+                    index.append(create_item)
+                return index
+        except Exception as e:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """save_to_file_csv method that writes the csv string representation
+            of list_objs to a file
+           Args:
+               cls: is the class
+               list_objs: is a list of instances who inherits of Base
+        """
+        filename = cls.__name__ + ".csv"
+        with open(filename, "w") as fl:
+            index = []
+            if list_objs is not None:
+                for item in list_objs:
+                    item = item.to_dictionary()
+                    index.append(item)
+            dico = cls.to_json_string(index)
+            fl.write(dico)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ Return: a list of instances or not if it is empty """
+        filename = cls.__name__ + ".csv"
         try:
             with open(filename, "r") as fl:
                 index = []
