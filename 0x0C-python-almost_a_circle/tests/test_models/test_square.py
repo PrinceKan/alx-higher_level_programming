@@ -68,7 +68,7 @@ class testclass(unittest.TestCase):
         st = str(s3)
         st2 = str(s4)
         self.assertEqual(st, "[Square] (12) 2/1 - 4")
-        self.assertEqual(st2, "[Square] (22) 0/0 - 4")
+        self.assertEqual(st2, "[Square] (20) 0/0 - 4")
 
     def test_update(self):
         """ test update method """

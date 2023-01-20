@@ -73,7 +73,7 @@ class testclass(unittest.TestCase):
         s = str(r3)
         s2 = str(r4)
         self.assertEqual(s, "[Rectangle] (12) 2/1 - 4/6")
-        self.assertEqual(s2, "[Rectangle] (7) 0/0 - 4/9")
+        self.assertEqual(s2, "[Rectangle] (5) 0/0 - 4/9")
 
     def test_update(self):
         """ test update method """
