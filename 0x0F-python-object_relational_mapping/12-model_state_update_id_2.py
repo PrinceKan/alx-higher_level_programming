@@ -23,7 +23,7 @@ def list_states():
     Session = session()
 
     new_state = Session.query(State).filter(State.id == 2).one()
-    new_state_name = "New Mexico"
+    new_state.name = "New Mexico"
     Session.commit()
 
     Session.close()
