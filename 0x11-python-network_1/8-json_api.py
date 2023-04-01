@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""sends a POST request to http://0.0.0.0:5000/search_user 
+"""sends a POST request to http://0.0.0.0:5000/search_user
    with the letter as a paramete
 """
 from sys import argv
