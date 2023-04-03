@@ -16,7 +16,7 @@ if __name__ == "__main__":
     r = requests.post(url, values)
     try:
         json_content = r.json()
-    except as e:
+    except Exception as e:
         print("Not a valid JSON")
     else:
         if len(json_content) < 1:
